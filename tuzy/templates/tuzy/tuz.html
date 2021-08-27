@@ -1,0 +1,31 @@
+{% load static from static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTf8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Jakub Wasiak Tuzy</title>
+	<!-- <link rel="stylesheet" href="/static/style.css"> -->
+	<link rel="stylesheet" href="{% static 'style.css' %}">
+	<!-- <link rel="stylesheet" href="/static/css/fontello.css"> -->
+	<link rel="stylesheet" href="{% static 'css/fontello.css' %}">
+</head>
+<body>
+		<form class="site-form" action = "{% url 'home' %}" method="post">
+			{% csrf_token %}
+			<input type="submit"  value="Strona główna">
+		</form>
+		<form class="site-form" action = "{% url 'tuzy:lista' %}" method="post">
+			{% csrf_token %}
+			<input type="submit"  value = "Powrot do listy">
+		</form>
+
+		<h1>Nazwa: {{tuz.nazwa}}</h1>
+		<p>Rozmiar: {{tuz.rozmiar}}</p>
+		<p>Waga: {{tuz.waga}}</p>
+		<p>Typ: {{tuz.typ}}</p>
+		<img src="{{tuz.foto.url}}"/>
+
+</body>
+</html>

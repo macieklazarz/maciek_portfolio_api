@@ -1,0 +1,287 @@
+{% load static from static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTf8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Maciej Łazarz - Welcome to my Website!</title>
+	<!-- <link rel="stylesheet" href="/static/style.css"> -->
+	<link rel="stylesheet" href="{% static 'style.css' %}">
+	<!-- <link rel="stylesheet" href="/static/css/fontello.css"> -->
+	<link rel="stylesheet" href="{% static 'css/fontello.css' %}">
+</head>
+<body>
+	<header>
+		<a href="#" class="logo"><span>M</span>aciej<span>Ł</span>azarz<span>.</span></a>
+		<div class="MenuToggle" onclick="toggleMenu();"></div>
+		<ul class="navigation">
+			<li><a href="#stronaglowna" onclick="toggleMenu();"><div class="zoom"><i class="icon-home"></i></div>Homepage</a></li>
+			<li><a href="#omnie" onclick="toggleMenu();"><div class="zoom"><i class="icon-male"></i></div>About me</a></li>
+			<li><a href="#Menu" onclick="toggleMenu();"><div class="zoom"><i class="icon-camera"></i></div>My website</a></li>
+			<li><a href="#oferta" onclick="toggleMenu();"><div class="spin"><i class="icon-cog"></i></div>My tools</a></li>
+			<li><a href="#contact" onclick="toggleMenu();"><div class="zoom"><i class="icon-mail-alt"></i></div>Contact</a></li>
+<!-- 			<li><a href="#xxx" onclick="toggleMenu();"><div class="spin"><i class="icon-spin3"></i></div>Switch to English</a></li> -->
+		</ul>
+	</header>
+	<section class="stronaglowna" id="stronaglowna">
+		<div class="content">
+			<h2>Hello!</h2>
+			<p>It's great to see you here! Enjoy your tour through my website. You will find info about me, my job and developed tools<span>.</span></p>
+			<!--<a href="#" class="btn">Our Menu</a> -->
+		</div>
+	</section>
+	
+	<section class="omnie" id="omnie">
+		<div class="row">
+			<div class="col50">
+				<h2 class="titleText"><span>A</span>bout me<span>.</span></h2><br>
+				<h3>Hi! My name is Maciek</h3>
+				<p>Currently I work as a backend developer in IQVIA Technology Solutions. I am part of the team responible for supporing CRM application developed by my company.</p>
+				<br>
+				<h3>ETL</h3>
+				<p>My daily task are mainly related to development of ETL tools on behalf of dedicated software, compatibile with mentioned CRM. I create tools responible for bilateral dataflow between application databases and ftp service. Another tool supporting my work is Informatica PwC.</p>
+				<br>
+				<h3>Oracle</h3>
+				<p>As a backend developer focused on CRM application I spend a lot of time searching the info among large data content collected by various clients. Malfuncioned ETL tools reqiures investigations to let me seek the source of problem, solve it and make the tool efficient. Another aspect is boosting existing tools. As amount of data is still enlarging, the performance of reports developed in mentioned CRM tools decreases. In this case I focus on optimization solutions.</p>
+				<br>
+				<h3>Python</h3>
+				<p>Some solutions applied by my are supported by tools developed in Python. This programming language helps me in situations when ETL configurations can be replaced by customized Python script. As there are libraries dedicated to manipulate the data some tasks are possible to be completed quicker.
+				</p>
+				</div>
+				<div class="col50">
+					<div class="imgBx">
+						<!--<img src="static/new/images/img1.jpg"> -->
+						<img src="./media/profil_image.jpg"> 
+					</div>
+				</div>
+			</div>
+	</section>
+	
+	<section class="Menu" id="Menu">
+		<!-- -->
+<!-- 		<div class="row">
+			<div class="col50">
+				<h2 class="titleText"><span>W</span>ebsite<span>.</span></h2><br>
+				<h3>Hi! My name is Maciek</h3>
+				<p>Currently I work as a backend developer in IQVIA Technology Solutions. I am part of the team responible for supporing CRM application developed by my company.</p>
+				<br>
+				<h3>ETL</h3>
+				<p>My daily task are mainly related to development of ETL tools on behalf of dedicated software, compatibile with mentioned CRM. I create tools responible for bilateral dataflow between application databases and ftp service. Another tool supporting my work is Informatica PwC.</p>
+				<br>
+				<h3>Oracle</h3>
+				<p>As a backend developer focused on CRM application I spend a lot of time searching the info among large data content collected by various clients. Malfuncioned ETL tools reqiures investigations to let me seek the source of problem, solve it and make the tool efficient. Another aspect is boosting existing tools. As amount of data is still enlarging, the performance of reports developed in mentioned CRM tools decreases. In this case I focus on optimization solutions.</p>
+				<br>
+				<h3>Python</h3>
+				<p>Some solutions applied by my are supported by tools developed in Python. This programming language helps me in situations when ETL configurations can be replaced by customized Python script. As there are libraries dedicated to manipulate the data some tasks are possible to be completed quicker.
+				</p>
+			</div>
+			<div class="col50">
+				<div class="content">
+					 <div class="imgBx">
+						<img src="static/new/images/img1.jpg"> 
+						<img src="./media/profil_image.jpg"> 
+					</div>
+					<div class="box">
+						<div class="imgBx">
+							<img src="./media/tuz1.jpg">
+						</div>
+					</div>
+					<div class="box">
+						<div class="imgBx">
+							<img src="./media/tuz2.jpg">
+						</div>
+					</div>
+					<div class="box">
+						<div class="imgBx">
+							<img src="./media/tuz3.jpg">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div> -->
+
+
+		<!-- -->
+		<div class="title">
+			<h2 class="titleText"> <span>W</span>ebsite<span>.</span></h2>
+			<p>This website is intended to introduce my skills which I use in my daily tasks as well as skills I want to develop to improve my IT knowledge. As my main tasks are related to ETL tools and I want to merge it with Python tools development in the section 'My tools' I post some tools developed by my using Python. Example libraries used to develop my tools are Pandas and Numpy.
+			<br>
+			<br>
+			The website has been prapaired using templates which are listed in section 'Usefull tools'. I've customized and adjusted one of template the way it could be usefull for my purposes. The website is based on Flask framework. This framework let me to apply some solutions which I wanted to be present on the website. For example in the section 'My tools' you can download tools prepaired by me. Section 'Contact' consists contact form. Data entered in the form is stored in file on the server. In the future I want to modify it the way it will be stored in database. Moreover as it is contact form the data is sent to my email. Next functionality is text message notification which I receive on my cell phone everytime when you submit the form. Libraries exploited to serve mail and notification functionalities are email and twilio.</p>
+		</div>
+		<div class="content">
+			<div class="box">
+				<div class="imgBx">
+					<img src="./media/python2.png">
+				</div>
+			</div>
+			<div class="box">
+				<div class="imgBx">
+					<img src="./media/django.png">
+				</div>
+			</div>
+			<div class="box">
+				<div class="imgBx">
+					<img src="./media/css2.png">
+				</div>
+			</div>
+			<div class="box">
+				<div class="imgBx">
+					<img src="./media/html2.png">
+				</div>
+			</div>
+			<!-- <div class="box">
+				<div class="imgBx">
+					<img src="./media/tuz33.jpg">
+				</div>
+			</div>
+			<div class="box">
+				<div class="imgBx">
+					<img src="./media/tuz11.jpg">
+				</div>
+			</div> -->
+		</div>
+
+		
+	</section>
+		
+	<section class="oferta" id="oferta">
+		<div class="title white">
+			<h2 class="titleText"> <span>M</span>y tools<span>.</span></h2>
+			<p>Below you can see the list of tools developed by me.</p>
+		</div>
+		<div class="content">
+			<a href="{% url 'tuzy:lista' %}" style="text-decoration: none">
+				<div class="box">
+					<div class="text">
+						<h3>Click to check weather API</h3>
+					</div>
+				</div>
+			</a>
+			<div class="box">
+				<div class="imgBx">
+					<img src="./media/tuz11.jpg">
+				</div>
+				<div class="text">
+					<h3>Tuz 1</h3>
+					<p>Parametr 1 : Wartość<br>
+							Parametr 2 : Wartość<br>
+							Parametr 3 : Wartość<br>
+							Parametr 4 : Wartość<br>
+					</p>
+				</div>
+			</div>
+			<div class="box">
+				<div class="imgBx">
+					<img src="./media/tuz2.jpg">
+				</div>
+				<div class="text">
+					<h3>Tuz 2</h3>
+					<p>Parametr 1 : Wartość<br>
+							Parametr 2 : Wartość<br>
+							Parametr 3 : Wartość<br>
+							Parametr 4 : Wartość<br>
+					</p>
+				</div>
+			</div>
+			<div class="box">
+				<div class="imgBx">
+					<img src="./media/tuz3.jpg">
+				</div>
+				<div class="text">
+					<h3>Tuz 3</h3>
+					<p>Parametr 1 : Wartość<br>
+							Parametr 2 : Wartość<br>
+							Parametr 3 : Wartość<br>
+							Parametr 4 : Wartość<br>
+					</p>
+				</div>
+			</div>
+			<a href="{% url 'tuzy:lista' %}" style="text-decoration: none">
+				<div class="box">
+						<div class="text">
+							<h3 >Kliknij i sprawdź wszystkie produkty</h3>
+						</div>
+				</div>
+			</a>
+		</div>
+<!-- 		<div class="contactForm2">
+			<form class="site-form2" action = "{% url 'tuzy:lista' %}" method="post">
+				{% csrf_token %}
+				<input type="submit"  value="Wszystkie produkty">
+			</form>
+
+	style="min-height: 518px;" 
+
+		</div> -->
+	</section>
+	
+	<section class="contact" id="contact">
+		<div class="title">
+			<h2 class="titleText"> <span>K</span>ontakt<span>.</span></h2>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+		</div>
+		<div class="frame">
+			<div class="contactForm">
+				<form action="submit_form" method="post"> 
+					<h3>Wyślij wiadomość:</h3>
+					<div class="inputBox">
+						<input type="text" name="email" placeholder="Twoje imię, mail, numer telefonu...">
+					</div>
+					<div class="inputBox">
+						<input type="text" name="temat" placeholder="Temat">
+					</div>
+					<div class="inputBox">
+						<textarea name="message" placeholder="Wiadomość"></textarea>
+					</div>
+					<div class="inputBox">
+						<input type="submit" value="Wyślij">
+					</div>
+				</form>
+				<h3>Telefon: 600 001 001</h3></br>
+			</div>
+			
+			
+			<div class="contactForm">
+				<h3>Media społecznościowe:</h3></br>
+				<div class="socialmedia">
+						<div class="fbicon">
+							<a href="https://www.facebook.com/" target="_blank"><i class="icon-facebook"></i></a>
+						</div>
+						<div class="googleicon">
+							<a href="https://www.google.com/" target="_blank"><i class="icon-google"></i></a>
+						</div>
+						<div class="yticon">
+							<a href="https://www.youtube.com/" class="tilelink" target="_blank" ><i class="icon-youtube"></i></a>
+						</div>
+					</div>
+			</div>
+			
+			<div class="contactForm">
+				<div class="socialmedia">
+					<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1605.0961252961238!2d20.086187528409543!3d50.529529929652675!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4717a1b84468cc15%3A0xa1e821d83f75ecaa!2sBiuro%20projektowe%20Jakub%20Wasiak!5e1!3m2!1spl!2sus!4v1621266273822!5m2!1spl!2sus" <!-- width="600" height="450" --> style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+				</div>
+			</div>
+		</div>
+	</section>
+	
+	<div class="copyrightText">
+		<p>2021 <a href='#'>Jakub Wasiak Tuzy</a>. &copy</p>
+	</div>
+	
+	<script type="text/javascript">
+		window.addEventListener('scroll', function(){
+			const header = document.querySelector('header');
+			header.classList.toggle("sticky", window.scrollY > 0);
+			});
+			
+			function toggleMenu(){
+			const MenuToggle=document.querySelector('.MenuToggle');
+			const navigation = document.querySelector('.navigation');
+			MenuToggle.classList.toggle('active');
+			navigation.classList.toggle('active');
+			}
+	</script>
+</body>
+</html>

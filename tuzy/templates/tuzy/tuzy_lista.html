@@ -1,0 +1,104 @@
+{% load static from static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTf8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Jakub Wasiak Tuzy</title>
+	<!-- <link rel="stylesheet" href="/static/style.css"> -->
+	<link rel="stylesheet" href="{% static 'style.css' %}">
+	<!-- <link rel="stylesheet" href="/static/css/fontello.css"> -->
+	<link rel="stylesheet" href="{% static 'css/fontello.css' %}">
+</head>
+<body>
+	<header class="hed">
+		<a href="{% url 'home' %}" class="logo"><span>P</span>owrót do strony głównej<span>.</span></a>
+		<!-- <div class="MenuToggle" onclick="toggleMenu();"></div> -->
+<!-- 		<ul class="navigation">
+			<li><a href="#stronaglowna" onclick="toggleMenu();"><div class="zoom"><i class="icon-home"></i></div>Strona główna</a></li>
+			<li><a href="#omnie" onclick="toggleMenu();"><div class="zoom"><i class="icon-male"></i></div>O mnie</a></li>
+			<li><a href="#Menu" onclick="toggleMenu();"><div class="zoom"><i class="icon-camera"></i></div>Galeria</a></li>
+			<li><a href="#oferta" onclick="toggleMenu();"><div class="spin"><i class="icon-cog"></i></div>Oferta</a></li>
+			<li><a href="#contact" onclick="toggleMenu();"><div class="zoom"><i class="icon-mail-alt"></i></div>Kontakt</a></li>
+			<li><a href="#xxx" onclick="toggleMenu();"><div class="spin"><i class="icon-spin3"></i></div>Switch to English</a></li>
+		</ul> -->
+	</header>
+<!-- 	<form class="site-form" action = "{% url 'home' %}" method="post">
+		{% csrf_token %}
+		<input type="submit"  value="Strona główna">
+	</form> -->
+	
+	<section class="weather">
+		<div class="row" id="row_api">
+			<div class="col50">
+				<form method="POST">{% csrf_token %}
+					<p><b>Select the city: </b></p>
+						<div class="dd">
+						<select name="city" class="form-control">
+							{% for results in showcity %}
+							<option value="{{results.id}}">{{ results.name}}</option>
+							{% endfor %}
+						</select>
+					</p>
+					<button type="submit" class="btn" id="btn-weather">Submit</button>
+					</div>
+				</form>
+			</div>
+				<div class="col50">
+					{% if stacja %}
+					<p><b>Choosen city: {{ stacja.stacja }}</b></p>
+
+					{% else %}
+					<p><b>Choose the city to see the data!</b></p><br>
+					{% endif %}
+					<table class="content-table">
+					   <tr>
+					   		<td>Air pressure:</td>
+					   		<td>{{ stacja.cisnienie }}</td>
+					   </tr>
+					   <tr>
+					   		<td>Temperature:</td>
+					   		<td>{{ stacja.temperatura }}</td>
+					   </tr>
+					   <tr>
+					   		<td>Wind speed:</td>
+					   		<td>{{ stacja.predkosc_wiatru }}</td>
+					   </tr>
+					   <tr>
+					   		<td>Wind direction:</td>
+					   		<td>{{ stacja.kierunek_wiatru }}</td>
+					   </tr>
+					   <tr>
+					   		<td>Humidity:</td>
+					   		<td>{{ stacja.wilgotnosc_wzgledna }}</td>
+					   </tr>
+					   <tr>
+					   		<td>Amount of atmospheric precipitation:</td>
+					   		<td>{{ stacja.suma_opadu }}</td>
+					   </tr>
+					</table>
+				</div>
+		</div>
+	</section>
+
+	<div class="copyrightText">
+		<p>2021 <a href='#'>Jakub Wasiak Tuzy</a>. &copy</p>
+	</div>
+	
+	<script type="text/javascript">
+		window.addEventListener('scroll', function(){
+			const header = document.querySelector('header');
+			header.classList.toggle("sticky", window.scrollY > 0);
+			});
+			
+			function toggleMenu(){
+			const MenuToggle=document.querySelector('.MenuToggle');
+			const navigation = document.querySelector('.navigation');
+			MenuToggle.classList.toggle('active');
+			navigation.classList.toggle('active');
+			}
+	</script>
+
+</body>
+</html>

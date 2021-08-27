@@ -1,0 +1,23 @@
+
+from requests import get, request
+from json import loads
+import requests
+
+
+# url = 'https://danepubliczne.imgw.pl/api/data/synop'
+# response = get(url)
+# for row in loads(response.text):
+#     print(row)
+
+url = "https://football-web-pages1.p.rapidapi.com/league-table.json"
+
+querystring = {"comp":"1","team":"1"}
+
+headers = {
+    'x-rapidapi-host': "football-web-pages1.p.rapidapi.com",
+    'x-rapidapi-key': "4da14988camshea36673f9c9f890p17804fjsnf2bd573638de"
+    }
+
+response = requests.request("GET", url, headers=headers, params=querystring)
+
+print(response.text)
