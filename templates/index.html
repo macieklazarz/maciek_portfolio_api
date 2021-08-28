@@ -17,7 +17,7 @@
 		<div class="MenuToggle" onclick="toggleMenu();"></div>
 		<ul class="navigation">
 			<li><a href="#stronaglowna" onclick="toggleMenu();"><div class="zoom"><i class="icon-home"></i></div>Homepage</a></li>
-			<li><a href="#omnie" onclick="toggleMenu();"><div class="zoom"><i class="icon-male"></i></div>About me</a></li>
+			<li><a href="#omnie" onclick="toggleMenu();"><div class="zoom"><i class="icon-user"></i></div>About me</a></li>
 			<li><a href="#Menu" onclick="toggleMenu();"><div class="zoom"><i class="icon-camera"></i></div>My website</a></li>
 			<li><a href="#oferta" onclick="toggleMenu();"><div class="spin"><i class="icon-cog"></i></div>My tools</a></li>
 			<li><a href="#contact" onclick="toggleMenu();"><div class="zoom"><i class="icon-mail-alt"></i></div>Contact</a></li>
@@ -155,23 +155,26 @@
 			<a href="{% url 'tuzy:lista' %}" style="text-decoration: none">
 				<div class="box">
 					<div class="text">
+						<h3><i class="icon-cloud-sun"></i></h3>
+					</div>
+					<div class="text">
 						<h3>Click to check weather API</h3>
 					</div>
 				</div>
 			</a>
-			<div class="box">
-				<div class="imgBx">
-					<img src="./media/tuz11.jpg">
+			<a href="{% url 'football_api' %}" style="text-decoration: none">
+				<div class="box">
+<!-- 					<div class="imgBx">
+						<img src="./media/tuz11.jpg">
+					</div> -->
+					<div class="text">
+						<h3><i class="icon-soccer-ball"></i></h3>
+					</div>
+					<div class="text">
+						<h3>Click to check football API</h3>
+					</div>
 				</div>
-				<div class="text">
-					<h3>Tuz 1</h3>
-					<p>Parametr 1 : Wartość<br>
-							Parametr 2 : Wartość<br>
-							Parametr 3 : Wartość<br>
-							Parametr 4 : Wartość<br>
-					</p>
-				</div>
-			</div>
+			</a>
 			<div class="box">
 				<div class="imgBx">
 					<img src="./media/tuz2.jpg">

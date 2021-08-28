@@ -33,12 +33,16 @@
 		<div class="row" id="row_api">
 			<div class="col50">
 				<form method="POST">{% csrf_token %}
-					<p><b>Select the city: </b></p>
+					<p><b>Select league: </b></p>
 						<div class="dd">
-						<select name="city" class="form-control">
-							{% for results in showcity %}
-							<option value="{{results.id}}">{{ results.name}}</option>
-							{% endfor %}
+						<select name="league" class="form-control">
+							<option value="Bundesliga">Bundesliga</option>
+							<option value="Premier League">Premier League</option>
+							<option value="Ederdivise">Ederdivise</option>
+							<option value="Primiera Division">Primiera Division</option>
+							<option value="Ligue 1">Ligue 1</option>
+							<option value="Serie A">Serie A</option>
+
 						</select>
 					</p>
 					<button type="submit" class="btn" id="btn-weather">Submit</button>
@@ -46,18 +50,37 @@
 				</form>
 			</div>
 				<div class="col50">
-					{% if stacja %}
-					<p><b>Choosen city: {{ stacja.stacja }}</b></p>
+					{% if tabela %}
+					<p><b>Choosen league: {{ liga }}</b></p>
 
-					{% else %}
-					<p><b>Choose the city to see the data!</b></p><br>
-					{% endif %}
+
 					<table class="content-table">
-					   <tr>
-					   		<td>Air pressure:</td>
-					   		<td>{{ stacja.cisnienie }}</td>
-					   </tr>
-					   <tr>
+						<tr>
+							<td><b>Team</b></td>
+							<td class="league_table"><b>Played games</b></td>
+							<td class="league_table"><b>Wins</b></td>
+							<td class="league_table"><b>Loses</b></td>
+							<td class="league_table"><b>Draws</b></td>
+							<td class="league_table"><b>Goals scored</b></td>
+							<td class="league_table"><b>Goals lost</b></td>
+							<td class="league_table"><b>Points</b></td>
+						</tr>
+						{% for row in tabela %}
+						<tr>
+							<td>{{row.0}}</td>
+							<td class="league_table">{{row.1}}</td>
+							<td class="league_table">{{row.2}}</td>
+							<td class="league_table">{{row.3}}</td>
+							<td class="league_table">{{row.4}}</td>
+							<td class="league_table">{{row.5}}</td>
+							<td class="league_table">{{row.6}}</td>
+							<td class="league_table">{{row.7}}</td>
+						</tr>
+						{% endfor %}
+					{% else %}
+						<p><b>Choose the city to see the data!</b></p><br>
+					{% endif %}
+					   <!-- <tr>
 					   		<td>Temperature:</td>
 					   		<td>{{ stacja.temperatura }}</td>
 					   </tr>
@@ -76,7 +99,7 @@
 					   <tr>
 					   		<td>Amount of atmospheric precipitation:</td>
 					   		<td>{{ stacja.suma_opadu }}</td>
-					   </tr>
+					   </tr> -->
 					</table>
 				</div>
 		</div>

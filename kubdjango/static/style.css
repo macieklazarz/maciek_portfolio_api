@@ -390,7 +390,8 @@ span
 	width: 536px;
 	margin: 20px;
 	padding: 40px;
-	background: #fff;
+	/*background: #fff;*/
+	border: 1px solid #166f0c;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -431,8 +432,9 @@ span
 	margin-top: 20px;
 	color: #111;
 	font-size: 1em;
-	color: #ff0157;
-	font-weight: 600;
+	/*color: #ff0157;*/
+	color: #e7a0a6;
+	font-weight: 450;
 }
 
 
@@ -718,6 +720,8 @@ body .oferta .content a .box .text h3
 /*	-webkit-appearance:  none;
 	-moz-appearance:  none;*/
 }
+
+
 .form-control:focus,
 .form-control:hover
 {
@@ -726,7 +730,7 @@ body .oferta .content a .box .text h3
 }
 .form-control option
 {
-	background: #fff;
+	background: #59d87a;;
 }
 
 .btn
@@ -751,6 +755,11 @@ body .oferta .content a .box .text h3
 	color: white;
 }
 
+.league_table
+{
+	text-align: center;
+	padding-right: 10px;
+}
 
 
 @media (max-width: 991px)

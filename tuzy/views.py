@@ -33,6 +33,8 @@ def tuzy_lista(request):
                 return render(request, 'tuzy/tuzy_lista.html',{"showcity":results, "stacja":row})
     return render(request, 'tuzy/tuzy_lista.html',{"showcity":results})
 
+def football_api(request):
+    return render(request, 'tuzy/football_api.html')
 
 # def tuz(request, slug):
 #     return HttpResponse(slug)
