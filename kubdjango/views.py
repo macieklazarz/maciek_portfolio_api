@@ -38,7 +38,8 @@ def football_api(request):
     	return render(request, 'football_api.html',{"tabela": rows, "liga":val})
     return render(request, 'football_api.html')
 
-
+def xlsxtocsv(request):
+    return render(request, 'xlsxtocsv.html')
 
 
 	

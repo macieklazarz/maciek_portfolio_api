@@ -396,8 +396,20 @@ span
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
-	
 }
+.oferta .content .box:hover
+{
+
+	/*background: #10330c;*/
+	/*border: unset;*/
+	background: #166f0c;
+	color: white;
+}
+.oferta .content .box:hover .text h3
+{
+	color: white;
+}
+
 .oferta .content .box .imgBx
 {
 	position: relative;
@@ -436,6 +448,9 @@ span
 	color: #e7a0a6;
 	font-weight: 450;
 }
+
+
+
 
 
 /*tu wstawiam weather*/
@@ -761,6 +776,55 @@ body .oferta .content a .box .text h3
 	padding-right: 10px;
 }
 
+.xlsximg
+{
+    margin-left: auto;
+    margin-right: auto;
+    width: fit-content;
+}
+.xlsximg img
+{
+	border: 1px solid;
+}
+
+#xlsxtitle
+{
+	align-items: unset;
+}
+.xlsxoferta
+{
+	padding: 50px;
+}
+.xlsxoferta .content
+{
+	justify-content: center;
+    display: flex;
+}
+.xlsxoferta .content a .box
+{
+    border-radius: 50px;
+    /*border: 1px solid #166f0c;*/
+    width: 310px;
+    height: fit-content;
+    text-align: center;
+    background-color: #166f0c
+}
+.xlsxoferta .content a .box:hover
+{
+
+    background-color: #1e9511;
+}
+.xlsxoferta .content .box .text h3
+{
+	color: white;
+	font-weight: 600;
+	font-size: 1.7em;
+}
+.xlsxoferta .content .box .text h3 span
+{
+	color: #ff0157;
+}
+
 
 @media (max-width: 991px)
 {
@@ -924,6 +988,12 @@ body .oferta .content a .box .text h3
 
 	.hed .logo {
     font-size: 1.4em;
+	}
+	#xlsxMenu
+	{
+		padding-left: 27px;
+		padding-top: 132px;
+		padding-right: 27px;
 	}
 
 	/*section 

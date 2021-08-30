@@ -1,0 +1,10 @@
+.icon-home:before { content: '\e800'; font-size: 30px;} /* '' */
+.icon-user:before { content: '\e801'; font-size: 30px;} /* '' */
+.icon-camera:before { content: '\e802'; font-size: 30px;} /* '' */
+.icon-cog:before { content: '\e803'; font-size: 30px;} /* '' */
+.icon-cloud-sun:before { content: '\e804'; color: #fff; font-size: 63px;} /* '' */
+.icon-facebook:before { content: '\f09a'; color: #fff;} /* '' */
+.icon-mail-alt:before { content: '\f0e0'; font-size: 30px;} /* '' */
+.icon-youtube:before { content: '\f167'; color: #fff;} /* '' */
+.icon-google:before { content: '\f1a0'; color: #fff;} /* '' */
+.icon-soccer-ball:before { content: '\f1e3'; color: #fff; font-size: 63px;} /* '' */
